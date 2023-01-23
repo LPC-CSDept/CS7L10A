@@ -5,20 +5,13 @@
 # numbers = list(map(int, input().split()))
 
 def main():
+    main.numbers = list(map(int, input().split()))
 
-    ######################################################
-    # Use this variable for the result
-    ######################################################
-    main.shortest = ''
-    main.longest = ''
-    ######################################################
+    ith = int(input())
 
     # Code your program here
 
-    names = input('Enter 5 students names').split()
-
-    print('The shortest name is ', main.shortest)
-    print('The longest name is ', main.longest)
+    print('The ith min val: ', main.ithmin)
 ##
 
 

@@ -7,8 +7,7 @@ import re
 def test_main_1():
     captureOut = io.StringIO()
     sys.stdout = captureOut
-    # datastr = '90\n10\n50\n40\n30'
-    datastr = 'James Robert Kurt Bill Matt'
+    datastr = '1 2 3 4 5\n2'
     sys.stdin = io.StringIO(datastr)
 
     main.main()
@@ -25,15 +24,13 @@ def test_main_1():
     # res = re.search(regex_string, main.evenlist)
     # assert res != None
     # print(res.group())
-    assert main.main.shortest == 'Bill'
-    assert main.main.longest == 'Robert'
+    assert main.main.ithmin == 2
 
 
 def test_main_2():
     captureOut = io.StringIO()
     sys.stdout = captureOut
-    # datastr = '90\n10\n50\n40\n30'
-    datastr = 'AAA Z A BBB aaaaa'
+    datastr = '5 25 15 10 0\n3'
     sys.stdin = io.StringIO(datastr)
 
     main.main()
@@ -50,5 +47,4 @@ def test_main_2():
     # res = re.search(regex_string, main.evenlist)
     # assert res != None
     # print(res.group())
-    assert main.main.shortest == 'A'
-    assert main.main.longest == 'aaaaa'
+    assert main.main.ithmin == 10
