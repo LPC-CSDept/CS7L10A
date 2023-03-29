@@ -6,6 +6,7 @@
 
 def main():
     main.numbers = list(map(int, input().split()))
+    #  Use main.ithmin to assign your result
 
     ith = int(input())
 
